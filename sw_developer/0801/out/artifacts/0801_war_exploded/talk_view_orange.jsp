@@ -89,7 +89,7 @@
     <tr>
         <td><%=vo.getTalkNo()%></td>
         <td><%=vo.getContent()%></td>
-        <% } %>
+        <% }  //이건 주석 %>
     </tr>
 </table>
 <br>
