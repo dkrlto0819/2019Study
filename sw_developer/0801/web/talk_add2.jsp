@@ -38,9 +38,7 @@
 
     Exception err = null;
     try{
-        Class.forName("oracle.jdbc.driver.OracleDriver");
-        Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:32771/xe",
-                "system", "1234");
+        Connection conn = Util.getConnection();
         String sql = "insert into talk_t values ( seq_talk.nextval, ?, ? )";
         PreparedStatement ps = conn.prepareStatement(sql);
 

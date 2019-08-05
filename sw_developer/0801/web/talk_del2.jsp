@@ -34,9 +34,7 @@
     }
 
     try{
-        Class.forName("oracle.jdbc.driver.OracleDriver");
-        Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:32771/xe",
-                "system", "1234");
+        Connection conn = Util.getConnection();
 
         String sql = "delete from talk_t where room_no =? and talk_no = ?";
         PreparedStatement ps = conn.prepareStatement(sql);

@@ -28,9 +28,7 @@
     TalkRoomVO vo = null;
 
     try{
-        Class.forName("oracle.jdbc.driver.OracleDriver");
-        Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:32771/xe",
-                "system", "1234");
+        Connection conn = Util.getConnection();
 
         //String sql = "select * from talk_room_t where room_no =" + roomNo;
         String sql = "select * from talk_room_t where room_no = ?";
